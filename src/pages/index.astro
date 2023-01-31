@@ -17,8 +17,8 @@ import Button from '../components/Button.svelte';
 				<p class="max-w-3xl">Find out what you can save with the power of Mercado’s digital, networked, and automated import order management platform.</p>
 				
 					<div class="flex gap-2 max-w-3xl">
-						<Button>Book a demo</Button>
-						<Button iswhite={true}>Get your full ROI</Button>
+						<Button link={'/demo'}>Book a demo</Button>
+						<Button link={'/my-roi'} iswhite={true}>Get your full ROI</Button>
 					</div>
 				
 				
@@ -28,7 +28,7 @@ import Button from '../components/Button.svelte';
 			<div class="p-4 bg-center bg-no-repeat bg-cover col-span-1p-4 rightz bg-extended-header">
 				
 			
-				<ExpandedContent client:load />
+				<ExpandedContent  client:load client:only />
 			</div>
 
 		</div>

@@ -1,23 +1,19 @@
 <script>
   import Buttons from "./Buttons.svelte";
+  const urlParams = new URLSearchParams(window.location.search); 
 
-
-
-
-  let numberOfContainers;
   const fixedNumber1 = 30000;
   const fixedNumber2 = 5000;
-  let productCostPerContainer = 0;
-  let logisticsCostPerContaine = 0;
+  let numberOfContainers = '' || urlParams.get('containers')
+
+  $: productCostPerContainer = fixedNumber1 * numberOfContainers;
+  $: logisticsCostPerContainer = fixedNumber2 * (numberOfContainers || 0);
+  $: totalPurchasingCost = productCostPerContainer + logisticsCostPerContainer;
+  $: ExpectedAnnualSales = totalPurchasingCost * 2;
+
   let totalPurchasingCost = 0;
   let ExpectedAnnualSales = 0;
-  const handleInput = (e) => {
-    numberOfContainers = e.target.value;
-    productCostPerContainer = fixedNumber1 * numberOfContainers;
-    logisticsCostPerContaine = fixedNumber2 * (numberOfContainers || 0);
-    totalPurchasingCost = productCostPerContainer + logisticsCostPerContaine;
-    ExpectedAnnualSales = totalPurchasingCost * 2;
-  };
+
 
   function formatIntoCompactCurrency(number) {
     const compactMoneyFormatter = Intl.NumberFormat('en-US', {
@@ -59,7 +55,6 @@
         >    <input
         class="no-spinner block p-2 m-2 mx-auto  text-center bg-white border rounded-md no-spinner border-darkBlue focus:border-darkBlue focus:ring-darkBlue pl-1/2 sm:text-md placeholder:text-center"
         type="number"
-        on:input={handleInput}
         placeholder="number of containers..."
         bind:value={numberOfContainers}
       /></span
@@ -76,7 +71,7 @@
     <p class="flex flex-wrap items-center  justify-between  text-darkBlue ">
       <span>Logistics Cost Per Container</span><span
         >{numberOfContainers
-          ? formatIntoCompactCurrency(logisticsCostPerContaine)
+          ? formatIntoCompactCurrency(logisticsCostPerContainer)
           : ''}</span
       >
     </p>
