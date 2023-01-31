@@ -2,19 +2,19 @@
   <button
     class="flex items-center justify-center w-full px-2 py-2 mx-[1px] my-1 text-white transition-colors duration-300 transform rounded-md grow bg-darkBlue focus:outline-none sm:w-auto sm: hover:bg-yellowz focus:bg-yellowz focus:ring focus:ring-blue-300 focus:ring-opacity-40"
   >
-    <img class="w-[18px]" src="/public/linkedin.png" alt="" srcset="" />
+    <img class="w-[18px]" src="/linkedin.png" alt="" srcset="" />
   </button>
 
   <button
     class="flex items-center justify-center w-full px-2 py-2 mx-[1px] my-1 text-white transition-colors duration-300 transform rounded-md grow bg-darkBlue focus:outline-none sm:w-auto sm: hover:bg-yellowz focus:bg-yellowz focus:ring focus:ring-blue-300 focus:ring-opacity-40"
   >
-    <img class="w-5 " src="/public/twitter.png" alt="" srcset="" />
+    <img class="w-5 " src="/twitter.png" alt="" srcset="" />
   </button>
 
   <button
     class="flex items-center justify-center w-full px-2 py-2 mx-[1px] my-1 text-white transition-colors duration-300 transform rounded-md grow bg-darkBlue focus:outline-none sm:w-auto sm: hover:bg-yellowz focus:bg-yellowz focus:ring focus:ring-blue-300 focus:ring-opacity-40"
   >
-    <img class="w-[9px] " src="/public/thefacebooks.png" alt="" srcset="" />
+    <img class="w-[9px] " src="/thefacebooks.png" alt="" srcset="" />
   </button>
 
   <button
