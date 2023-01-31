@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import App from '../components/App.svelte';
+import ExpandedContent from '../components/ExpandedContent.svelte';
+import Button from '../components/Button.svelte';
+---
+
+<Layout title="Welcome to Astro.">
+
+	<main class="lg:grid w-full h-full grid-cols-2">
+		<div class="flex-grow  p-4 md:p-6 lg:p-16 leftz bg-darkBlue text-3xl text-white ">
+			<img src="/public/Mercado_Logo_White+Yellow.png" class="w-full max-w-[15rem]" alt="Mercado Logo">
+			<div class="space-y-20 mt-20">
+				<h2 class="text-6xl font-bold">Calculate your fast <br> track savings with <br> Mercad<span class="text-yellowz">o</span>.</h2>
+				<p class="max-w-3xl">Find out what you can save with the power of Mercado’s digital, networked, and automated import order management platform.</p>
+				<p class="max-w-3xl">Find out what you can save with the power of Mercado’s digital, networked, and automated import order management platform.</p>
+				
+					<div class="flex gap-2 max-w-3xl">
+						<Button>Book a demo</Button>
+						<Button iswhite={true}>Get your full ROI</Button>
+					</div>
+				
+				
+				
+				</div>
+			</div>
+			<div class="p-4 bg-center bg-no-repeat bg-cover col-span-1p-4 rightz bg-extended-header">
+				
+			
+				<ExpandedContent client:load />
+			</div>
+
+		</div>
+	</main>
+
+</Layout>
+
