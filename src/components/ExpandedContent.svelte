@@ -1,6 +1,10 @@
 <script>
+
   import Buttons from "./Buttons.svelte";
+
   const urlParams = new URLSearchParams(window.location.search); 
+
+  
 
   const fixedNumber1 = 30000;
   const fixedNumber2 = 5000;
