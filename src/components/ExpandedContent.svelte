@@ -1,17 +1,20 @@
 <script>
+  import { onMount } from 'svelte';
+	import WebSharAPIButton from './WebSharAPIButton.svelte';
 
-  import Buttons from "./Buttons.svelte";
+  import FallbackButtons from "./FallBackShareButtons.svelte";
 
-  const urlParams = new URLSearchParams(window.location.search); 
+  const urlParams = new URLSearchParams(window.location.search);
+  let supportsWebShare = false
 
-  
+  onMount(() => supportsWebShare = navigator.share);
 
-  const fixedNumber1 = 30000;
-  const fixedNumber2 = 5000;
-  let numberOfContainers = '' || urlParams.get('containers')
+  const MAGIC_NUMBER_1 = 30000;
+  const MAGIC_NUMBER_2 = 5000;
+  let numberOfContainers = '' || urlParams.get('num')
 
-  $: productCostPerContainer = fixedNumber1 * numberOfContainers;
-  $: logisticsCostPerContainer = fixedNumber2 * (numberOfContainers || 0);
+  $: productCostPerContainer = MAGIC_NUMBER_1 * numberOfContainers;
+  $: logisticsCostPerContainer = MAGIC_NUMBER_2 * (numberOfContainers || 0);
   $: totalPurchasingCost = productCostPerContainer + logisticsCostPerContainer;
   $: ExpectedAnnualSales = totalPurchasingCost * 2;
 
@@ -105,8 +108,15 @@
       >
     </p>
     <p class=" font-bold text-darkBlue">Share your results!</p>
+    {#if supportsWebShare}
+    <!-- content here -->
+    <WebSharAPIButton />
+    {:else}
+    <!-- else content here -->
+    <FallbackButtons />
+    {/if}
 
-    <Buttons />
+
   </div>
 </section>
 
