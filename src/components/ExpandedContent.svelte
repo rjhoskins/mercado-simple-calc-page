@@ -110,9 +110,10 @@
     <p class=" font-bold text-darkBlue">Share your results!</p>
     {#if supportsWebShare}
     <!-- content here -->
-    {:else}
     <WebSharAPIButton />
+    {:else}
     <!-- else content here -->
+    <WebSharAPIButton />
     <FallbackButtons />
     {/if}
 
