@@ -113,7 +113,7 @@
     <WebSharAPIButton />
     {:else}
     <!-- else content here -->
-    <WebSharAPIButton />
+
     <FallbackButtons />
     {/if}
 
