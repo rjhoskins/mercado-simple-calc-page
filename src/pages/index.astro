@@ -7,14 +7,14 @@ import Button from '../components/Button.svelte';
 <Layout title="Welcome to Astro.">
 
 	<main class="lg:grid w-full h-full grid-cols-2">
-		<div class="flex-grow  p-4 md:p-6 lg:p-16 leftz bg-darkBlue text-3xl text-white ">
-			<img src="/Mercado_Logo_White+Yellow.png" class="w-full max-w-[15rem]" alt="Mercado Logo">
-			<div class="space-y-20 mt-20">
-				<h2 class="text-6xl font-bold">Calculate your fast <br> track savings with <br> Mercad<span class="text-yellowz">o</span>.</h2>
-				<p class="max-w-3xl">Find out what you can save with the power of Mercado’s digital, networked, and automated import order management platform.</p>
+		<div class="flex-grow  p-4 md:p-6 lg:p-16 leftz bg-darkBlue text-xl text-white ">
+			<img src="/Mercado_Logo_White+Yellow.png" class="w-full max-w-[7.5rem]" alt="Mercado Logo">
+			<div class="space-y-12 mt-20">
+				<h2 class="text-4xl font-bold">Calculate your fast <br> track savings with <br> Mercado.</h2>
+				<p class="max-w-2xl">Find out what you can save with the power of Mercado’s digital, networked, and automated import order management platform.</p>
 				<p class="max-w-3xl">Find out what you can save with the power of Mercado’s digital, networked, and automated import order management platform.</p>
 				
-					<div class="flex gap-2 max-w-3xl">
+					<div class="flex gap-2 md:max-w-[66%] md:ml-auto md:mr-auto">
 						<Button link={'/demo'}>Book a demo</Button>
 						<Button link={'/my-roi'} iswhite={true}>Get your full ROI</Button>
 					</div>
@@ -23,7 +23,7 @@ import Button from '../components/Button.svelte';
 				
 				</div>
 			</div>
-			<div class="p-4 bg-center bg-no-repeat bg-cover col-span-1p-4 rightz bg-extended-header">
+			<div class="p-2 bg-center bg-no-repeat bg-cover col-span-1p-4 rightz bg-extended-header">
 				
 			
 				<ExpandedContent  client:load client:only />

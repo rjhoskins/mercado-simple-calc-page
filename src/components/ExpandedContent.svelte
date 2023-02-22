@@ -107,7 +107,7 @@
           : ''}</span
       >
     </p>
-    <p class=" font-bold text-darkBlue">Share your results!</p>
+    <p class=" font-bold text-darkBlue text-center">Share your results!</p>
     {#if supportsWebShare}
     <!-- content here -->
     <WebSharAPIButton />
