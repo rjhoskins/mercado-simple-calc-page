@@ -54,20 +54,20 @@
 
 
 
-    <p class="flex flex-wrap items-center  justify-between  text-darkBlue ">
+    <p class="flex flex-wrap items-center text-sm justify-between  text-darkBlue ">
       <span>    <p class="font-bold text-center text-darkBlue">
         Enter the number of containers <br /> you  import every year
       </p></span>
       <span
         >    <input
-        class="no-spinner block p-2 m-2 mx-auto  text-center bg-white border rounded-md no-spinner border-darkBlue focus:border-darkBlue focus:ring-darkBlue pl-1/2 sm:text-md placeholder:text-center"
+        class="no-spinner block p-2 m-2 mx-auto bg-white border rounded-md no-spinner border-darkBlue focus:border-darkBlue focus:ring-darkBlue pl-1/2 sm:text-md placeholder:text-center"
         type="number"
         placeholder="number of containers..."
         bind:value={numberOfContainers}
       /></span
       >
     </p>
-    <p class="flex flex-wrap items-center  justify-between  text-darkBlue ">
+    <p class="flex flex-wrap items-center px-6 sm:text-base text-sm justify-between  text-darkBlue ">
       <span>Product Cost Per Container</span>
       <span
         >{numberOfContainers
@@ -75,21 +75,21 @@
           : ''}</span
       >
     </p>
-    <p class="flex flex-wrap items-center  justify-between  text-darkBlue ">
+    <p class="flex flex-wrap items-center px-6 sm:text-base text-sm justify-between  text-darkBlue ">
       <span>Logistics Cost Per Container</span><span
         >{numberOfContainers
           ? formatIntoCompactCurrency(logisticsCostPerContainer)
           : ''}</span
       >
     </p>
-    <p class="flex flex-wrap items-center  justify-between  text-darkBlue ">
+    <p class="flex flex-wrap items-center px-6 sm:text-base text-sm justify-between  text-darkBlue ">
       <span>Total Purchasing Cost</span><span
         >{numberOfContainers
           ? formatIntoCompactCurrency(totalPurchasingCost)
           : ''}</span
       >
     </p>
-    <p class="flex flex-wrap items-center  justify-between  text-darkBlue b ">
+    <p class="flex flex-wrap items-center px-6 sm:text-base text-sm   justify-between  text-darkBlue ">
       <span>Expected Annual Sales</span><span
         >{numberOfContainers
           ? formatIntoCompactCurrency(ExpectedAnnualSales)
